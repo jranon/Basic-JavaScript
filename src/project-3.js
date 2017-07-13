@@ -5,20 +5,19 @@ const makeCat = (name, age) => {
   // add an age property to the object with the value set to the age argument
   // add a method called meow that returns the string 'Meow!'
   // return the object
-const newobject={
-  name:name,
-  age:age
-};
-newobject.meow=()=>'Meow!';
-return newobject
+  const newObject = {};
+  newObject.name = name;
+  newObject.age = age;
+  newObject.meow = () => 'Meow!';
+  return newObject;
 };
 
 const addProperty = (object, property) => {
   // add the property to the object with a value of null
   // return the object
   // note: the property name is NOT 'property'.  The name is the value of the argument called property (a string)
-object[property]=null;
-return object
+  object[property] = null;
+  return object;
 };
 
 const invokeMethod = (object, method) => {
@@ -31,7 +30,7 @@ const invokeMethod = (object, method) => {
 const multiplyMysteryNumberByFive = (mysteryNumberObject) => {
   // mysteryNumberObject has a property called mysteryNumber
   // multiply the mysteryNumber property by 5 and return the product
-return mysteryNumberObject.mysteryNumber*5;
+  return mysteryNumberObject.mysteryNumber * 5;
 };
 
 const deleteProperty = (object, property) => {
@@ -44,11 +43,10 @@ const deleteProperty = (object, property) => {
 const newUser = (name, email, password) => {
   // create a new object with properties matching the arguments passed in.
   // return the new object
-  const newobject={
-    name:name,
-    email:email,
-    password:password
-  };
+  const newobject = {};
+  newobject.name = name;
+  newobject.email = email;
+  newobject.password = password;
   return newobject;
 };
 
@@ -62,11 +60,8 @@ const hasProperty = (object, property) => {
   // return true if the object has the value of the property argument
   // property is a string
   // otherwise return false
-  if (object.hasOwnProperty(property)) {
-    return true;
-  } else {
-    return false;
-  }
+  if (object[property]) return true;
+  return false;
 };
 
 const verifyPassword = (user, password) => {
