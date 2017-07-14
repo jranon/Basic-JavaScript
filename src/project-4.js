@@ -77,6 +77,9 @@ const addReverseString = () => {
   // name this method reverse
   // hint:
   // you will need to use 'this' inside of reverse
+  String.prototype.reverse = function () {
+    return this.split('').reverse().join('');
+  };
 };
 
 const nFactorial = (n) => {
